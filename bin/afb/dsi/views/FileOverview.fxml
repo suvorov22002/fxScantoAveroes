@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="idApp" prefHeight="800.0" prefWidth="1280.0" scaleShape="false" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="afb.dsi.views.FileController">
+   <children>
+      <SplitPane dividerPositions="0.2918622848200313" layoutX="260.0" layoutY="14.0" prefHeight="800.0" prefWidth="1280.0" stylesheets="@modena.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane prefHeight="798.0" prefWidth="200.0" styleClass="background" stylesheets="@properties.css" SplitPane.resizableWithParent="false">
+               <children>
+                  <Button fx:id="loadFile" layoutX="10.0" layoutY="17.0" mnemonicParsing="false" onAction="#handleLoadFile" prefHeight="35.0" prefWidth="200.0" styleClass="label-bright" stylesheets="@modena.css" text="Charger documents" textFill="#ed2b2b" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="15.0" />
+                  <Button layoutX="14.0" layoutY="80.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="200.0" stylesheets="@modena.css" text="Indexer documents" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="62.0" />
+                  <AnchorPane layoutX="10.0" layoutY="155.0" prefHeight="280.0" prefWidth="335.0" styleClass="obackground" stylesheets="@properties.css" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="155.0">
+                     <children>
+                        <Button layoutX="27.0" layoutY="14.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="136.0" styleClass="split-arrows-vertical" text="Image 1" textFill="#c96262" />
+                        <Button layoutX="216.0" layoutY="14.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="101.0" text="Del" />
+                     </children>
+                  </AnchorPane>
+                  <ScrollPane layoutX="10.0" layoutY="474.0" prefHeight="272.0" prefWidth="190.0" styleClass="background" stylesheets="@modena.css" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="470.0" />
+                  <Label layoutX="9.0" layoutY="442.0" styleClass="background" stylesheets="@modena.css" text="Proprietes du document" AnchorPane.leftAnchor="10.0" />
+                  <Label layoutX="10.0" layoutY="119.0" styleClass="background" stylesheets="@modena.css" text="Listes des document" AnchorPane.leftAnchor="10.0" />
+               </children></AnchorPane>
+          <AnchorPane layoutX="10.0" layoutY="155.0" prefHeight="798.0" prefWidth="1080.0">
+               <children>
+                  <AnchorPane prefHeight="70.0" prefWidth="1080.0" styleClass="background" stylesheets="@modena.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Button layoutX="756.0" layoutY="18.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="145.0" text="ENVOYER" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0" />
+                        <Button layoutX="14.0" layoutY="17.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="145.0" text="SPLIT" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="20.0">
+                           <padding>
+                              <Insets right="2.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <ScrollPane id="idViewer" fx:id="scrollPaneId" layoutY="89.0" onScroll="#dragOver" prefHeight="700.0" prefWidth="1080.0" styleClass="background" stylesheets="@modena.css" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="89.0">
+                     <content>
+                        <HBox fx:id="hBox" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fx:id="imageView1" fitHeight="680.0" fitWidth="629.0" onDragDetected="#dragDetected" onInputMethodTextChanged="#dragOver" pickOnBounds="true" preserveRatio="true" x="30.0" y="40.0">
+                                 <image>
+                                    <Image url="@../../../../ressources/image-001.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <ImageView fx:id="imageView2" fitHeight="680.0" fitWidth="629.0" layoutX="-20.0" layoutY="-30.0" onDragDetected="#dragDetected" onInputMethodTextChanged="#dragOver" pickOnBounds="true" preserveRatio="true" x="30.0" y="40.0">
+                                 <image>
+                                    <Image url="@../../../../ressources/image-001.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <ImageView fx:id="imageView3" fitHeight="680.0" fitWidth="629.0" layoutX="614.0" layoutY="-30.0" onDragDetected="#dragDetected" onInputMethodTextChanged="#dragOver" pickOnBounds="true" preserveRatio="true" x="30.0" y="40.0">
+                                 <image>
+                                    <Image url="@../../../../ressources/image-001.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </content>
+                  </ScrollPane>
+                  <Pane layoutX="11.0" layoutY="79.0" prefHeight="10.0" prefWidth="1080.0" styleClass="background" stylesheets="@modena.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

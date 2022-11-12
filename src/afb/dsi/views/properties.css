@@ -1,0 +1,26 @@
+
+
+.background {
+    -fx-background-color: #808080;
+}
+
+.obackground {
+    -fx-background-color: #ffffff;
+}
+
+#idViewer{
+	-fx-background-color: #c0c0c0;
+}
+
+.button {
+    -fx-padding: 5 22 5 22;   
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 2;
+    -fx-background-radius: 1;
+    -fx-background-color: #ffffff;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11pt;
+    -fx-text-fill: #ff0000;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+    -fx-font-weight: bold;
+}
